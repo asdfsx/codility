@@ -25,9 +25,19 @@ func TestSolution(t *testing.T) {
 	if !compare(result, []int{1, 2, 3, 4}) {
 		t.Errorf("expect [1, 2, 3, 4], but found %s", result)
 	}
+
+	A = []int{}
+	K = 1
+	result = Solution(A, K)
+	if !compare(result, nil) {
+		t.Errorf("expect nil, but found %s", result)
+	}
 }
 
 func compare(A []int, B[] int) bool{
+	if A == nil && B == nil{
+		return true
+	}
 	if len(A) != len(B){
 		return false
 	}

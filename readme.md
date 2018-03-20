@@ -1,1 +1,1 @@
-golang code for [codility]:(https://app.codility.com/programmers/lessons/1-iterations/)
+golang code for [codility]: https://app.codility.com/programmers/lessons/1-iterations/
