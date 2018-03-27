@@ -1,7 +1,5 @@
 package lesson6
 
-import "fmt"
-
 // https://codesays.com/2014/solution-to-max-product-of-three-by-codility/
 // 如果全部是正数的话最大的3个的数乘积应该是最大的。如果最小的两个如果是负值的话，负负得正，可能可以算出一个最大值
 
