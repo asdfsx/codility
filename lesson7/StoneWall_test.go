@@ -1,7 +1,7 @@
 package lesson7
 
 import (
-	"testing"
+"testing"
 )
 
 func TestSolution(t *testing.T) {
