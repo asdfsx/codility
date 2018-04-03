@@ -8,7 +8,7 @@ func Solution4(S string) int{
 		} else if len(stack)>0 && v == ')' && stack[len(stack)-1] =='(' {
 			stack = stack[0: len(stack)-1]
 		} else if len(stack)>1 && v == ')' && stack[len(stack)-2] =='(' {
-			stack = stack[0: len(stack)-2]
+			stack = stack[0: len(stack)-1]
 		} else {
 			stack = append(stack, v)
 		}

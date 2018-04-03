@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+var Fortest = "fortest"
+
 func Solution(N int) int{
 	bytestring := fmt.Sprintf("%b", N);
 
