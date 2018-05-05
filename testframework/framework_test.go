@@ -2,7 +2,7 @@ package testframework
 
 import (
 	"testing"
-	. "codility/lesson1"
+	. "github.com/asdfsx/codility/lesson1"
 	. "github.com/smartystreets/goconvey/convey"
 	. "github.com/prashantv/gostub"
 	. "github.com/golang/mock/gomock"

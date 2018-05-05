@@ -2,6 +2,30 @@
 
 
 [[projects]]
+  name = "github.com/go-sql-driver/mysql"
+  packages = ["."]
+  revision = "a0583e0143b1624142adab07e0e97fe106d99561"
+  version = "v1.3"
+
+[[projects]]
+  name = "github.com/go-xorm/builder"
+  packages = ["."]
+  revision = "bad0a612f0d6277b953910822ab5dfb30dd18237"
+  version = "v0.2.0"
+
+[[projects]]
+  name = "github.com/go-xorm/core"
+  packages = ["."]
+  revision = "c10e21e7e1cec20e09398f2dfae385e58c8df555"
+  version = "v0.6.0"
+
+[[projects]]
+  name = "github.com/go-xorm/xorm"
+  packages = ["."]
+  revision = "d85bb4911c725a53b135fc12862748a41b6c07da"
+  version = "v0.7.0"
+
+[[projects]]
   name = "github.com/golang/mock"
   packages = ["gomock"]
   revision = "13f360950a79f5864a972c786a10a50e44b69541"
@@ -11,7 +35,7 @@
   branch = "master"
   name = "github.com/gopherjs/gopherjs"
   packages = ["js"]
-  revision = "82b322028c96512b15077093b16a5f1c7ea897ac"
+  revision = "8dffc02ea1cb8398bb73f30424697c60fcf8d4c5"
 
 [[projects]]
   name = "github.com/jtolds/gls"
@@ -48,6 +72,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "cae0adee74c9f42677d5c0bbbc80bbfccfd2f9cea027bf72977f2817104e6fb5"
+  inputs-digest = "a38378bebeacfed5741ffada5b411b40e531394bef04f87e5265a3145b5284ed"
   solver-name = "gps-cdcl"
   solver-version = 1
