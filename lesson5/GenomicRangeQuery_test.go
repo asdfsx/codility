@@ -11,6 +11,6 @@ func TestSolution3(t *testing.T) {
 	Q := []int{4, 5, 6}
 	result := Solution3(S, P, Q)
 	if !common.SliceCompare(result, []int{2, 4, 1}){
-		t.Errorf("expect [2, 4, 1], but found %s", result)
+		t.Errorf("expect [2, 4, 1], but found %v", result)
 	}
 }

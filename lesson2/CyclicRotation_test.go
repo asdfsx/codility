@@ -9,28 +9,28 @@ func TestSolution(t *testing.T) {
 	K := 3
 	result := Solution(A, K)
 	if !compare(result, []int{9, 7, 6, 3, 8}) {
-		t.Errorf("expect [9, 7, 6, 3, 8], but found %s", result)
+		t.Errorf("expect [9, 7, 6, 3, 8], but found %v", result)
 	}
 
 	A = []int{0, 0, 0}
 	K = 1
 	result = Solution(A, K)
 	if !compare(result, []int{0, 0, 0}) {
-		t.Errorf("expect [0, 0, 0], but found %s", result)
+		t.Errorf("expect [0, 0, 0], but found %v", result)
 	}
 
 	A = []int{1, 2, 3, 4}
 	K = 4
 	result = Solution(A, K)
 	if !compare(result, []int{1, 2, 3, 4}) {
-		t.Errorf("expect [1, 2, 3, 4], but found %s", result)
+		t.Errorf("expect [1, 2, 3, 4], but found %v", result)
 	}
 
 	A = []int{}
 	K = 1
 	result = Solution(A, K)
 	if !compare(result, nil) {
-		t.Errorf("expect nil, but found %s", result)
+		t.Errorf("expect nil, but found %v", result)
 	}
 }
 

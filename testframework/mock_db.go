@@ -7,6 +7,7 @@ package testframework
 import (
 	gomock "github.com/golang/mock/gomock"
 	reflect "reflect"
+	"fmt"
 )
 
 // MockRepository is a mock of Repository interface
@@ -36,6 +37,7 @@ func (m *MockRepository) EXPECT() *MockRepositoryMockRecorder {
 func (m *MockRepository) Create(key string, value []byte) error {
 	ret := m.ctrl.Call(m, "Create", key, value)
 	ret0, _ := ret[0].(error)
+	fmt.Println("---------")
 	return ret0
 }
 

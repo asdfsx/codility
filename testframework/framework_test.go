@@ -45,7 +45,7 @@ func TestSolution(t *testing.T){
 			mockRepo.EXPECT().Create(Any(), Any()).Return(nil)
 			stubs := StubFunc(&newRedisRepo2, mockRepo)
 			defer stubs.Reset()
-			So(repo.Create("", nil), ShouldBeNil)
+			So(mockRepo.Create("", nil), ShouldBeNil)
 		})
 	})
 }

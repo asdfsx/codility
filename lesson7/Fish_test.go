@@ -9,6 +9,6 @@ func TestSolution3(t *testing.T) {
 	B := []int{0, 1, 0, 0, 0}
 	result := Solution3(A, B)
 	if result != 2 {
-		t.Errorf("expect 2, but found %s", result)
+		t.Errorf("expect 2, but found %v", result)
 	}
 }
