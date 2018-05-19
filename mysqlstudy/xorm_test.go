@@ -11,7 +11,7 @@ func TestXorm(t *testing.T){
 	stubs := New()
 	stubs.Stub(&MYSQLUSER, "root")
 	stubs.Stub(&MYSQLPASSWORD, "root")
-	stubs.Stub(&MYSQLADDR, "192.168.99.100")
+	stubs.Stub(&MYSQLADDR, "127.0.0.1")
 	stubs.Stub(&MYSQLPORT, 3306)
 	stubs.Stub(&DATABASENAME, "mysql")
 	defer stubs.Reset()
