@@ -4,10 +4,10 @@ import (
 	"testing"
 	. "github.com/prashantv/gostub"
 	. "github.com/smartystreets/goconvey/convey"
-	"github.com/go-xorm/xorm"
+	"github.com/jinzhu/gorm"
 )
 
-func TestXorm(t *testing.T){
+func TestGorm(t *testing.T) {
 	stubs := New()
 	stubs.Stub(&MYSQLUSER, "root")
 	stubs.Stub(&MYSQLPASSWORD, "root")
@@ -16,45 +16,43 @@ func TestXorm(t *testing.T){
 	stubs.Stub(&DATABASENAME, "mysql")
 	defer stubs.Reset()
 
-	var engine *xorm.Engine
+	var db *gorm.DB
 	var err error
+
 	Convey("create engine", t, func(){
-		engine, err = CreateEngine()
+		db, err = CreateDB()
 		So(err, ShouldEqual, nil)
 	})
 	Convey("create database", t, func(){
-		So(ORMCreateDatabase(engine), ShouldEqual, nil)
+		So(GORMCreateDatabase(db), ShouldEqual, nil)
 	})
-	stubs.Stub(&DATABASENAME, "xorm")
-	Convey("create new engine", t, func(){
-		engine, err = CreateEngine()
+	stubs.Stub(&DATABASENAME, "gorm")
+	Convey("create new db", t, func(){
+		db, err = CreateDB()
 		So(err, ShouldEqual, nil)
 	})
 	Convey("create table", t, func(){
-		So(ORMCreateTable(engine), ShouldEqual, nil)
+		So(GORMCreateTable(db), ShouldEqual, nil)
 	})
-
 	Convey("insert", t, func(){
-		So(ORMInsert(engine), ShouldEqual, nil)
+		So(GORMInsert(db), ShouldEqual, nil)
 	})
-
 	Convey("query", t, func(){
-		So(ORMQuery(engine), ShouldEqual, nil)
+		So(GORMQuery(db), ShouldEqual, nil)
 	})
-
 	Convey("update", t, func(){
-		So(ORMUpdate(engine), ShouldEqual, nil)
+		So(GORMUpdate(db), ShouldEqual, nil)
 	})
 
 	Convey("query", t, func(){
-		So(ORMQuery(engine), ShouldEqual, nil)
+		So(GORMQuery(db), ShouldEqual, nil)
 	})
 
 	Convey("drop table", t, func(){
-		So(ORMDropTable(engine), ShouldEqual, nil)
+		So(GORMDropTable(db), ShouldEqual, nil)
 	})
 
 	Convey("drop database", t, func(){
-		So(ORMDropDatabase(engine), ShouldEqual, nil)
+		So(GORMDropDatabase(db), ShouldEqual, nil)
 	})
 }

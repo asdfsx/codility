@@ -11,7 +11,7 @@ import (
 
 func TestEtcd(t *testing.T){
 	stubs := New()
-	stubs.Stub(&Endpoints, []string{"http://127.0.0.1:2379"})
+	stubs.Stub(&Endpoints, []string{"http://192.168.99.100:2379"})
 	defer stubs.Reset()
 
 	var etcdCli client.Client

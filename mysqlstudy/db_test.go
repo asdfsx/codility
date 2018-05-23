@@ -12,7 +12,7 @@ import (
 
 func TestDB1(t *testing.T){
 	// create connection
-	connstr := fmt.Sprintf("%s:%s@tcp(%s)/%s", "root", "root", "127.0.0.1:3306", "mysql")
+	connstr := fmt.Sprintf("%s:%s@tcp(%s)/%s", "root", "root", "192.168.99.100:3306", "mysql")
 	dbConn, err := sql.Open("mysql", connstr)
 	if err != nil{
 		t.Error(err)
@@ -60,7 +60,7 @@ func TestDB2(t *testing.T){
 	defer userstub.Reset()
 	pwdstub := Stub(&MYSQLPASSWORD, "root")
 	defer pwdstub.Reset()
-	addrstub := Stub(&MYSQLADDR, "127.0.0.1")
+	addrstub := Stub(&MYSQLADDR, "192.168.99.100")
 	defer addrstub.Reset()
 	portstub := Stub(&MYSQLPORT, 3306)
 	defer portstub.Reset()

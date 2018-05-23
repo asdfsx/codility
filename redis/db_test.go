@@ -11,7 +11,7 @@ import (
 func TestRedis(t *testing.T){
 	stubs := New()
 	stubs.Stub(&NETWORK, "tcp")
-	stubs.Stub(&ADDR, "127.0.0.1")
+	stubs.Stub(&ADDR, "192.168.99.100")
 	stubs.Stub(&PORT, 6379)
 	defer stubs.Reset()
 
